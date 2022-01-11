@@ -1,0 +1,127 @@
+/* --- Variable --- */
+:root {
+  --primary-bg: #191D2A;
+  --box-bg-1: #303167;
+  --bg-red: #5F2B37;
+  --bg-group-2:#513F35;
+  --bg-group-18: #63477F;
+  --bg-group-17: #434082;
+  --radious:15px;
+}
+
+/* --- Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 57%;
+  font-family: 'Titillium Web', sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-bg);
+  color: #fff;
+  padding: 2rem;
+}
+a,button,p {
+  font-size: 2rem;
+}
+h1 {
+  font-size:4rem
+}
+
+/* --- Layout --- */
+
+/* ## header ## */
+
+main header {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  grid-column: 3/13;
+  grid-row: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  padding: 1rem 3rem;
+}
+.periodic_table {
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(18,1fr);
+  grid-template-rows: repeat(7,1fr) 20px repeat(2,1fr);
+  overflow: hidden;
+}
+.atom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333E50;
+}
+.atom:hover {
+  background-color: #fff;
+  color: #191D2A;
+  transition: all 0.3s ease-in-out;
+  font-weight: 900;
+  cursor: pointer;
+}
+.atom h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+} .atom h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+} .atom p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  align-self: flex-start;
+}
+.atom-2 { grid-column: 18/19;} 
+.atom-5, .atom-13 {grid-column: 13/14;}
+.atom-72, .atom-104 {grid-column: 4/5;}
+.atom-57, .atom-89 {grid-column: 4/5;}
+.atom-ln {grid-row: 9/10;}
+.ln_series, .ac_series {grid-column: 1/3;}
+.atom-ac {grid-row: 10;}
+/* --- Components --- */
+/* --- Utility --- */
+.bg_red {
+  background-color: var(--bg-red)
+} .bg_grop_2 {
+  background-color: var(--bg-group-2);
+} .bg_grop_18 {
+  background-color: var(--bg-group-18);
+} .bg_grop_17 {
+  background-color: var(--bg-group-17);
+} .bg_violate {
+  background-color: #303169;
+} .bg_cross_1 {
+  background-color: #16495A;
+} .bg_cross_green {
+  background-color: #195541;
+} .bg_ln_series {
+  background-color: #40355E;
+} .bg_act_series {
+  background-color: #372247;
+}
+.border_radious_top_left {
+  border-top-left-radius: var(--radious);
+} .border_radious_top_right {
+  border-top-right-radius: var(--radious);
+} .border_radious_bottom_left {
+  border-bottom-left-radius: var(--radious);
+} .border_radious_bottom_right {
+  border-bottom-right-radius: var(--radious);
+}
